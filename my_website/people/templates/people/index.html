@@ -1,0 +1,9 @@
+{% extends 'people/base.html' %}
+
+{% block title %}Страница категорий{% endblock title %}
+
+{% block contetn %}
+    {% for c in cats %}
+        <p><a href="{% url 'businessman' c.pk %}">{{ c.name }}</a></p>
+    {% endfor %}
+{% endblock contetn %}
