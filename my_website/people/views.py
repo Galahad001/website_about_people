@@ -7,6 +7,15 @@ def index(request):
     cats = Category.objects.all()
     context = {'people':people, 'cats':cats}
     return render(request, 'people/index.html', context)
+    
+def our_way(request):
+    return render(request, 'people/our_way.html')
+
+def contacts(request):
+    return render(request, 'people/contacts.html')
+
+def questions(request):
+    return render(request, 'people/questions.html')
 
 def businessman(request, p_id):
     people =People.objects.filter(cat_id=p_id)

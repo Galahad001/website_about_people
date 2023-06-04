@@ -61,9 +61,21 @@ body{
 }
 
 .block_cat p a{
-    color: red;
+    color: rgb(231, 195, 195);
+    text-decoration: none;
+    font-size: 20px;
 }
 
 .peole_block{
     color: wheat;
+}
+
+/* our_way.html */
+.our{
+    color: aliceblue;
+}
+
+/* contact.html */
+.contact{
+    color: aliceblue;
 }

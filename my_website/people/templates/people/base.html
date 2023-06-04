@@ -9,13 +9,13 @@
 <body>
     <header class="test">
         <div class="head">
-            <p>О нас</p>
-            <p>Контакты</p>
-            <p>Главная страница</p>
-            <p>FAQ</p>
+            <p><a href="{% url 'our_way'%}">О нас</a></p>
+            <p><a href="{% url 'contacts'%}">Контакты</a></p>
+            <p><a href="{% url 'index' %}">Главная страница</a></p>
+            <p><a href="{% url 'questions' %}">FAQ</a></p>
         </div>
     </header>
-    
+
 {% block contetn %}{% endblock contetn %}
 
 <footer class="foot">

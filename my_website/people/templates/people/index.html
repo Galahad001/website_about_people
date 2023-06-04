@@ -1,4 +1,5 @@
 {% extends 'people/base.html' %}
+{% load static %}
 
 {% block title %}Страница категорий{% endblock title %}
 
@@ -7,9 +8,10 @@
         {% for c in cats %}
         <div class="block_cat">
             <p><a href="{% url 'businessman' c.pk %}">{{ c.name }}</a></p>
+            <img src="{% static 'people/img/img.jpg' %}" alt="1" width="200px" height="250px">
         </div>
         {% endfor %}
     </div>
-
+    
 
 {% endblock contetn %}

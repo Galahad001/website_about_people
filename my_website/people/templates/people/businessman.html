@@ -7,10 +7,10 @@
     <div class="peole_block">
         {% for p in people %}
             <p>{{ p.title }}</p>
-            <!-- <p>{{ p.content }}</p>
+            <p>{{ p.content }}</p>
             <p>{{ p.auhor }}</p>
             <p>Дата публикации: {{ p.date_create|date:'d-m-Y H:m:s' }}</p>
-            <p>{{ p.cat }}</p> -->
+            <p>{{ p.cat }}</p>
             <hr>
         {% endfor %}
     </div>
