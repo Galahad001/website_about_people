@@ -3,7 +3,13 @@
 {% block title %}Страница категорий{% endblock title %}
 
 {% block contetn %}
-    {% for c in cats %}
-        <p><a href="{% url 'businessman' c.pk %}">{{ c.name }}</a></p>
-    {% endfor %}
+    <div class="block">
+        {% for c in cats %}
+        <div class="block_cat">
+            <p><a href="{% url 'businessman' c.pk %}">{{ c.name }}</a></p>
+        </div>
+        {% endfor %}
+    </div>
+
+
 {% endblock contetn %}

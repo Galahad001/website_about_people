@@ -11,6 +11,6 @@ def index(request):
 def businessman(request, p_id):
     people =People.objects.filter(cat_id=p_id)
     cats = Category.objects.all()
-    context = {'people':people, 'cats':cats}
+    context = {'people':people, 'cats':cats, 'test_id':p_id}
     return render(request, 'people/businessman.html', context)
 # Create your views here.

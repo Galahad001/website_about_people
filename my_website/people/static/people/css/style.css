@@ -1,3 +1,69 @@
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
 .test{
+    width: 100%;
+    height: 10%;
     color: rgb(108, 57, 226);
+    background-color: gainsboro;
+
+}
+
+.head{
+    height: 100%;
+}
+
+.head p{
+    width: 23%;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+    font-family: sans-serif;
+    margin: 0;
+    padding-top: 20px;
+}
+
+.foot{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 7%;
+    background-color: gainsboro;
+}
+
+.foot div{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 19px;
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+}
+
+.block{
+    width: 90%;
+    height: 70%;
+    margin: auto;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    text-align: center;
+}
+
+.block_cat{
+    display: inline-block;
+    width: 30%;
+    height: 70%;
+    text-align: center;
+}
+
+.block_cat p a{
+    color: red;
+}
+
+.peole_block{
+    color: wheat;
 }
