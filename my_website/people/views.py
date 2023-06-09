@@ -1,6 +1,27 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from .models import *
+# from django.http import HttpResponse
+from .models import People
+from .models import Category
+from .serializers import PeopleSerializer
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
+
+@api_view(['GET'])
+def api_peoples(request):
+    if request.method == 'GET':
+        peoples = People.objects.all()
+        serilizers = PeopleSerializer(peoples, many=True)
+        return Response(serilizers.data)
+    
+
+@api_view(['GET'])
+def api_people_detail(request, pk):
+    if request.method == 'GET':
+        peoples = People.objects.get(pk=pk)
+        serilizers = PeopleSerializer(peoples)
+        return Response(serilizers.data)
+
+
 
 def index(request):
     people =People.objects.all()

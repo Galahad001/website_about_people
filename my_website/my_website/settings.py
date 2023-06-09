@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # 
     'people',
+    'rest_framework', #Rest API
+    'corsheaders',    #Rest API
 ]
 
 MIDDLEWARE = [
@@ -50,6 +52,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',      #Rest API
+    'django.middleware.common.CommonMiddleware',  #Rest API
 ]
 
 ROOT_URLCONF = 'my_website.urls'
@@ -125,3 +129,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ORIGIN_ALLOW_ALL = True    # Rest API
+# разрешить обработку запросов, приходящих с любых доменов,
+# но только к тем путям, что включают префикс api
+CORS_URLS_REGEX = r'^/api/.*$'  # Rest API
