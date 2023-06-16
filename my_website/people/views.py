@@ -7,7 +7,7 @@ from .serializers import PeopleSerializer
 from .forms import *
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, DetailView
 
 
 @api_view(['GET'])
@@ -83,3 +83,8 @@ def businessman(request, p_id):
     return render(request, 'people/businessman.html', context)
 
 # Create your views here.
+
+class PostsView(DetailView): # Класс динамических страниц,наслед. от DetailView
+    model = People             # Указать модель с которой работаем
+    template_name = 'people/test.html' #Указать какой шаблон будет обрабатывать
+    context_object_name = 'post' #Ключ для передачи в шаблон
